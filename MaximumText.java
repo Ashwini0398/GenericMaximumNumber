@@ -25,4 +25,26 @@ public class MaximumTest {
         Assert.assertEquals((Integer) 78,num3);
     }
 
+    @Test
+    public void givenFirstNumberFloatIsMaximum()
+    {
+        Float num4 = max.toPrint1( 3.4f , 2.3f ,2.4f );
+        Assert.assertEquals((Float) 3.4f,num4);
+    }
+
+    @Test
+    public void givenSecondNumberFloatIsMaximum()
+    {
+        Float num5 = max.toPrint1( 3.4f , 4.3f ,2.4f );
+        Assert.assertEquals((Float) 4.3f,num5);
+    }
+
+    @Test
+    public void givenThirdNumberFloatIsMaximum()
+    {
+        Float num6 = max.toPrint1( 3.4f , 2.3f ,4.4f );
+        Assert.assertEquals((Float) 4.4f,num6);
+    }
+
+
 }
