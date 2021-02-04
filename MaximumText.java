@@ -46,5 +46,24 @@ public class MaximumTest {
         Assert.assertEquals((Float) 4.4f,num6);
     }
 
+    @Test
+    public void givenFirstNumberStringIsMaximum()
+    {
+        String num7 = max.toPrint2( "PINEAPPLE" , "PEN" , "PAPER" );
+        Assert.assertEquals((String) "PINEAPPLE",num7);
+    }
 
+    @Test
+    public void givenSecondNumberStringIsMaximum()
+    {
+        String num8 = max.toPrint2(  "PEN", "PINEAPPLE" , "PAPER" );
+        Assert.assertEquals((String) "PINEAPPLE",num8);
+    }
+
+    @Test
+    public void givenThirdNumberStringIsMaximum()
+    {
+        String num9 = max.toPrint2(  "PEN", "PINEAPPLE" , "POMOGRANATE" );
+        Assert.assertEquals((String) "POMOGRANATE",num9);
+    }
 }

@@ -27,4 +27,17 @@ public class MaximumGeneric {
 
     }
 
+     public String toPrint2(String num1, String num2, String num3) {
+        String maximum = num1;
+        if (num2.compareTo(maximum)>0) {
+            maximum = num2;
+        }
+        else if(num3.compareTo(maximum)>0)
+        {
+            maximum = num3;
+        }
+        return maximum;
+
+    }
+
 }
