@@ -2,68 +2,76 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MaximumTest {
-    MaximumGeneric max= new MaximumGeneric();
+
 
     @Test
-    public void givenFirstNumberIsMaximum()
+    public void givenFirstNumberIntegerIsMaximum()
     {
-        Integer num1 = max.maximum(24,12,10);
-        Assert.assertEquals((Integer) 24,num1);
+        Integer[] intergerValues ={ 24, 1, 2 };
+        Integer max = new MaximumGeneric<>(intergerValues).max();
+        Assert.assertEquals((Integer) 24, max);
     }
 
     @Test
-    public void givenSecondNumberIsMaximum()
+    public void givenSecondNumberIntegerIsMaximum()
     {
-        Integer num2 = max.maximum(24,38,10);
-        Assert.assertEquals((Integer) 38,num2);
+        Integer[] intergerValues = { 24, 38, 10 };
+        Integer max = new MaximumGeneric<>(intergerValues).max();
+        Assert.assertEquals((Integer) 38,max);
     }
 
     @Test
-    public void givenThirdNumberIsMaximum()
+    public void givenThirdNumberIntegerIsMaximum()
     {
-        Integer num3 = max.maximum(24,12,78);
-        Assert.assertEquals((Integer) 78,num3);
+        Integer[] intergerValues =  { 24, 12, 40 };
+        Integer max = new MaximumGeneric<>(intergerValues).max();
+        Assert.assertEquals((Integer) 40,max);
     }
-
     @Test
     public void givenFirstNumberFloatIsMaximum()
     {
-        Float num4 = max.maximum( 3.4f , 2.3f ,2.4f );
-        Assert.assertEquals((Float) 3.4f,num4);
+        Float[] floatValues ={20f, 2f, 1f};
+        Float max = new MaximumGeneric<>(floatValues).max();
+        Assert.assertEquals((Float) 20f, max);
     }
 
     @Test
     public void givenSecondNumberFloatIsMaximum()
     {
-        Float num5 = max.maximum( 3.4f , 4.3f ,2.4f );
-        Assert.assertEquals((Float) 4.3f,num5);
+        Float[] floatValues ={ 3f, 36f, 1f };
+        Float max = new MaximumGeneric<>(floatValues).max();
+        Assert.assertEquals((Float) 36f, max);
     }
 
     @Test
     public void givenThirdNumberFloatIsMaximum()
     {
-        Float num6 = max.maximum( 3.4f , 2.3f ,4.4f );
-        Assert.assertEquals((Float) 4.4f,num6);
+        Float[] floatValues ={ 3f, 1f, 36f };
+        Float max = new MaximumGeneric<>(floatValues).max();
+        Assert.assertEquals((Float) 36f, max);
     }
 
     @Test
     public void givenFirstNumberStringIsMaximum()
     {
-        String num7 = max.maximum( "PINEAPPLE" , "PEN" , "PAPER" );
-        Assert.assertEquals((String) "PINEAPPLE",num7);
+        String[] stringValues ={ "PINEAPPLE" ,"PEN",  "PAPER"};
+        String max = new MaximumGeneric<>(stringValues).max();
+        Assert.assertEquals( "PINEAPPLE" , max);
     }
 
     @Test
     public void givenSecondNumberStringIsMaximum()
     {
-        String num8 = max.maximum(  "PEN", "PINEAPPLE" , "PAPER" );
-        Assert.assertEquals((String) "PINEAPPLE",num8);
+        String[] stringValues ={ "PEN", "PINEAPPLE" , "PAPER"};
+        String max = new MaximumGeneric<>(stringValues).max();
+        Assert.assertEquals( "PINEAPPLE" ,max);
     }
 
     @Test
     public void givenThirdNumberStringIsMaximum()
     {
-        String num9 = max.maximum(  "PEN", "PINEAPPLE" , "POMOGRANATE" );
-        Assert.assertEquals((String) "POMOGRANATE",num9);
+        String[] stringValues ={ "PEN",  "PAPER", "PINEAPPLE" };
+        String max = new MaximumGeneric<>(stringValues).max();
+        Assert.assertEquals("PINEAPPLE" , max);
     }
 }
